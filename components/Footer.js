@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <Container>
       <FooterContainer>
-      Photography and photogrammetry-centric NFT art gallery. © 2022 Degen Vibes LLC
+      Sign up with <a href="https://www.premint.xyz/livethelifetv/" target="_blank"> PreMint </a> to join the AllowList Crew. © 2022 Degen Vibes LLC.
       </FooterContainer>
-    </Container>
+    </Container>    
   )
 }
 

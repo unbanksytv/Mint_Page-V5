@@ -49,9 +49,6 @@ const Minting = () => {
       <Mint>
         <TitleContainer>
           <Title>The Photo Labs <br /> by LiveTheLifeTV<br /> Claim Your NFT.</Title>
-          <Count>
-            {address && totalSupply}
-          </Count>
         </TitleContainer>
         <ButtonContainer>
             {
