@@ -28,8 +28,8 @@ const View = () => {
         {nft?.metadata.description}
       </DescriptionContainer>
       <ButtonContainer>
-        <GhostButtonLink href="https://rarible.com/collection/0xc7801db88d4ccdfd8deaf53aed8a546f2016fda1/items" target="_blank">View on Rarible</GhostButtonLink>
-        <GhostButtonLink href="https://opensea.io/assets/ethereum/0xc7801db88d4ccdfd8deaf53aed8a546f2016fda1/0" target="_blank">View on Open Sea</GhostButtonLink>
+        <GhostButtonLink href="https://rarible.com/" target="_blank">View on Rarible</GhostButtonLink>
+        <GhostButtonLink href="https://opensea.io/" target="_blank">View on Open Sea</GhostButtonLink>
       </ButtonContainer>
     </Container>
   )
