@@ -8,10 +8,7 @@ export const activeChainId = ChainId.Rinkeby;
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThirdwebProvider desiredChainId={activeChainId}
-      chainRpc={{
-        [ChainId.Rinkeby]: 'https://mainnet.infura.io/v3/8939c7d1d5d44d7aa151d4173f5b8189'
-      }}>
+    <ThirdwebProvider desiredChainId={activeChainId}>
       <Component {...pageProps} />
       <ToastContainer 
         position="bottom-center"
