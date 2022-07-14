@@ -1,11 +1,8 @@
 import Head from "next/head";
 import tw from "tailwind-styled-components";
-
-// Components
 import Header from "../components/Header";
 import Collection from "../components/Collection";
 import Footer from "../components/Footer";
-import Collection from "../components/Collection";
 
 export default function Collection() {
   return (
