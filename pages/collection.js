@@ -6,7 +6,9 @@ import Header from "../components/Header";
 import Collection from "../components/Collection";
 import Footer from "../components/Footer";
 
-export default function ViewCollection() {
+export default function NFTCollectionRender() {
+  const contract = useNFTCollection(0xf9AA4dccaC356f7eBB5F07A3b4Ece60F8119a219);
+  const { data: nft, isLoading } = useNFT(contract, 0);
   return (
     <Container>
       <Head>

@@ -1,6 +1,5 @@
 import tw from "tailwind-styled-components";
-import { useNFTCollection, MediaRenderer, useNFT } from "@thirdweb-dev/react";
-import { Button } from "./Button";
+import { useNFTCollection, ThirdwebNftMedia, useNFT } from "@thirdweb-dev/react";
 
 const Collection = () => {
   const nftCollection = useNFTCollection('0xf9AA4dccaC356f7eBB5F07A3b4Ece60F8119a219');
@@ -8,7 +7,7 @@ const Collection = () => {
     data: nft,
     isLoading,
     error,
-  } = useNFT(nftCollection, 0)
+  } = useNFT(nftCollection, { start: 0, count: 100 })
 
   async function getNFTs() {
     const nfts = await nftCollection.getAll()
@@ -16,31 +15,17 @@ const Collection = () => {
   }
   
   return (
-    !isLoading && 
-    <Container>
-      <VideoContainer>
-        <MediaRenderer
-          src={nft?.metadata.animation_url}
-          alt={nft?.metadata.name}
-        />
-      </VideoContainer>
-      <TitleContainer>
-        <Title>
-          {nft?.metadata.name}
-        </Title>
-      </TitleContainer>
-      <DescriptionContainer>
-        {nft?.metadata.description}
-      </DescriptionContainer>
-      <ButtonContainer>
-        <GhostButtonLink href="https://livethelife.tv/" target="_blank">Stake</GhostButtonLink>
-        <GhostButtonLink href="https://livethelife.tv/" target="_blank">Claim</GhostButtonLink>
-      </ButtonContainer>
-    </Container>
+    <div>
+      {!isLoading && nft ? (
+        <ThirdwebNftMedia metadata={nft.metadata} />
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
   )
 }
 
-export default ViewCollection
+export default Collection
 
 const VideoContainer = tw.div`
  mt-12
