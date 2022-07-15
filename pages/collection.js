@@ -7,9 +7,6 @@ import Collection from "../components/Collection";
 import Footer from "../components/Footer";
 
 export default function NFTCollection() {
-  const nftCollection = useNFTCollection("0xf9AA4dccaC356f7eBB5F07A3b4Ece60F8119a219");
-  const { data: nfts, isLoading } = useNFTs(nftCollection);
-
   return (
     <Container>
       <Head>
