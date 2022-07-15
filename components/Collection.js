@@ -1,9 +1,9 @@
 import tw from "tailwind-styled-components";
-import { useNFTCollection, ThirdwebNftMedia, useNFTs } from "@thirdweb-dev/react";
+import { useNFTDrop, ThirdwebNftMedia, useNFTs } from "@thirdweb-dev/react";
 
 const View = () => {
-  const nftCollection = useNFTCollection("0xf9AA4dccaC356f7eBB5F07A3b4Ece60F8119a219");
-  const {data: nfts} = useNFTs(nftCollection)
+  const nftDrop = useNFTDrop("0xf9AA4dccaC356f7eBB5F07A3b4Ece60F8119a219");
+  const {data: nfts} = useNFTs(nftDrop)
 
 
 return (
@@ -20,7 +20,7 @@ return (
   )
 }
 
-export default Collection
+export default nftDrop
   
   
 const Container = tw.div`

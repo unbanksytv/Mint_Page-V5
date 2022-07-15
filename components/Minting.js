@@ -13,7 +13,7 @@ const Minting = () => {
   const address = useAddress();
   const connectWithMetamask = useMetamask();
   const disconnectWallet = useDisconnect();
-  const EditionDrop = useEditionDrop("0xE409914e454b133B61a404345f232c1eB487cC61")
+  const nftDrop = nftDrop("0xf9AA4dccaC356f7eBB5F07A3b4Ece60F8119a219")
   const router = useRouter()
 
   const mint = async () => {
@@ -42,7 +42,7 @@ const Minting = () => {
       }
     }
     getTotal();
-  }, [EditionDrop])
+  }, [nftDrop])
 
   return (
     <Container>

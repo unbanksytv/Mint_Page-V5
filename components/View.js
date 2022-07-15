@@ -1,9 +1,9 @@
 import tw from "tailwind-styled-components";
-import { useEditionDrop, MediaRenderer, useNFT } from "@thirdweb-dev/react";
+import { nftDrop, MediaRenderer, useNFT } from "@thirdweb-dev/react";
 import { Button } from "./Button";
 
 const View = () => {
-  const nftCollection = useEditionDrop('0xC7801dB88D4cCdFD8deAF53aeD8A546f2016Fda1');
+  const nftCollection = nftDrop("0xf9AA4dccaC356f7eBB5F07A3b4Ece60F8119a219");
   const {
     data: nft,
     isLoading,
